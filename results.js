@@ -24,4 +24,4 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.getElementById("clicks").textContent = clicks;
 	document.getElementById("time").textContent = time;
 
-}
+});
