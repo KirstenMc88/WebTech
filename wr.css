@@ -34,3 +34,12 @@ body {
     background-color: #0056b3;
     color: white;
 }
+
+.copyright-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 70px;
+}
