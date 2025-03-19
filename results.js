@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	
  // extract values from url
-	let startPage = getQueryParam("start")
-	let endPage = getQueryParam("end")
-	let clicks = getQueryParam("clicks")
-	let time = getQueryParam("time")
+	let startPage = getQueryParam("start") || "New_Orleans";
+	let endPage = getQueryParam("end") || "Pro_Football_Hall_of_Fame";
+	let clicks = getQueryParam("clicks") || 3;
+	let time = getQueryParam("time") || 273;
  
  // insert values into results page, replaces underscores in page names with spaces for readability
 	document.getElementById("startPage").textContent = startPage.replace(/_/g, " ");
