@@ -1,3 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
+ //event listener waits on page being fully loaded before runnin JS
+ 
+ // function to get query parameters
+	function getQueryParam(param) {
+		const urlParams = new URLSearchParams(window.location.search); // gets bit of the URL after ?
+		return urlParams.get(param); //gets parameter for each key
+	}
+	
+ // extract values from url
+	let startPage = getQueryParam("start")
+	let endPage = getQueryParam("end")
+	let clicks = getQueryParam("clicks")
+	let time = getQueryParam("time")
+ 
+ // insert values into results page, replaces underscores in page names with spaces for readability
+	document.getElementById("startPage").textContent = startPage.replace(/_/g, " ");
+	document.getElementById("endPage").textContent = endPage.replace(/_/g, " ");
+	document.getElementById("clicks").textContent = clicks;
+	document.getElementById("time").textContent = time;
 
 }
